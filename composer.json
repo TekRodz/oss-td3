@@ -1,0 +1,29 @@
+{
+    "name": "tekro/oss-td3",
+    "description": "Scrapping for star wars characters",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tekro\\OssTd3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tekrodz",
+            "email": "kevinkmmichel@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.6||^10.2",
+        "symfony/dom-crawler": "^6.0"
+    },
+    "require": {
+        "symfony/css-selector": "^6.0"
+    },
+    "scripts": {
+        "phpstan": "@php vendor/bin/phpstan analyse src --level=max",
+        "test": "@php vendor/bin/phpunit tests"
+    }
+}
