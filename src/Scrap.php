@@ -13,13 +13,14 @@ class Scrap {
         $res = [];
 
         $html = (string)file_get_contents("https://www.starwars-holonet.com/encyclopedie/liste-personnages.html");
-
+            
         $crawler = new Crawler($html);
         $crawler = $crawler->filter('.lstv2_nom');
-
+    
         foreach($crawler as $domElement){
             array_push($res, $domElement->nodeValue);
         }
+        
         return $res;
     }
 }
